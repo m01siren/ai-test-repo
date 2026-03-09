@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Кондитерская "Звездная Капля"</title>
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body>
+        <!-- Шапка сайта -->
+        <header class="header">
+            <div class="header-content">
+                <h1>Кондитерская "Звездная Капля"</h1>
+                <p>Домашние десерты, приготовленные с любовью</p>
+                <button class="pixel-btn" onclick="scrollToDesserts()">
+                    Посмотреть десерты
+                </button>
+            </div>
+        </header>
+
+        <main class="container">
+            <!-- Блок популярных десертов -->
+            <section id="desserts" class="section">
+                <h2 class="section-title">Наши десерты</h2>
+                <div class="desserts-grid" id="desserts-grid">
+                    <!-- Карточки генерируются через JS -->
+                </div>
+            </section>
+
+            <!-- Простая корзина -->
+            <section id="cart-section" class="section cart-section">
+                <h2 class="section-title">Корзина</h2>
+                <div id="cart-items" class="cart-items">
+                    <p>Корзина пуста</p>
+                </div>
+                <div class="cart-total">
+                    Итого: <span id="total-price">0</span> ₽
+                </div>
+            </section>
+
+            <!-- Форма предзаказа -->
+            <section id="order" class="section order-section">
+                <h2 class="section-title">Оформление предзаказа</h2>
+                <form id="order-form" class="pixel-form">
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Адрес доставки</label>
+                        <textarea id="address" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Дата доставки</label>
+                        <input type="date" id="date" required />
+                    </div>
+                    <button type="submit" class="pixel-btn submit-btn">
+                        Оформить предзаказ
+                    </button>
+                </form>
+                <div id="success-message" class="hidden success-message">
+                    Спасибо! Ваш предзаказ принят. Мы свяжемся с вами.
+                </div>
+            </section>
+        </main>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
